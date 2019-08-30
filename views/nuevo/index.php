@@ -7,7 +7,7 @@
     <body>
         <?php require 'views/header.php'; ?>
         <div id="main">
-            <h1 class="center"> Seccion de Nuevo</h1>
+            <h1 class="center"> Seccion Nuevo</h1>
             <div class="center"><?php echo $this->mensaje;?></div>
             <form action="<?php echo constant('URL'); ?>nuevo/registrarAlumno" method="POST">
                 <p>
@@ -16,11 +16,11 @@
                 </p>
 
                 <p>
-                    <label for="nombre">Nombre</label><br>
+                    <label for="nombre">Nombre:</label><br>
                     <input type="text" name="nombre" id="" required>
                 </p>
                 <p>
-                    <label for="apellido">Apellido</label><br>
+                    <label for="apellido">Apellido:</label><br>
                     <input type="text" name="apellido" id="">
                 </p>
                 <p>
