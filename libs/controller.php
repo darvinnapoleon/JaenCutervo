@@ -1,9 +1,10 @@
 <?php
+//clase que crea objeto de las vista
 class controller
 {
     function __construct()
     { 
-        $this->view = new view(); 
+        $this->view = new view(); //objeto de la lib view
     }
     function loadModel($model)
     {

@@ -6,11 +6,12 @@ class NuevoModel extends model
     {
         parent::__construct();
     }
-    public function insert($datos)
+  
+     public function insusu($datos)
     {
         try{
-            $query= $this->db->connect()->prepare('INSERT INTO ALUMNOS (MATRICULA, NOMBRE, APELLIDO) VALUES(:matricula, :nombre, :apellido)');
-            $query->execute(['matricula' => $datos['matricula'], 'nombre' => $datos['nombre'], 'apellido' => $datos['apellido']]);
+            $query= $this->db->connect()->prepare('INSERT INTO USUARIO (NOMUSU, CONUSU) VALUES(:nomusu, :conusu)');
+            $query->execute(['nomusu' => $datos['nomusu'], 'conusu' => $datos['conusu']]);
             return true;
         }catch(PDOException $e){
      
@@ -18,5 +19,4 @@ class NuevoModel extends model
             return false;
         }
     }
-
 }

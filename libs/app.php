@@ -1,47 +1,48 @@
 <?php
-//esta es una clase
+//esta es una clase  que require_once el paquete de controllers 
 require_once 'controllers/errores.php';
 class app {
-    //put your code here
-    function __construct() {
-       // echo '<p>Nueva App</p>';
-        $url = isset($_GET['url']) ? $_GET['url']:null;
+     function __construct(){
+        $url = isset($_GET['url'])? $_GET['url']: null;
         $url = rtrim($url, '/');
-        $url = explode('/',$url);
-        
-        if (empty($url[0])) {
-            $archivocontrolador = 'controllers/main.php';
-             require_once $archivocontrolador;
-             $controller = new main();
-             $controller->loadModel('main');
-             $controller->render();
-             return false;
+        $url = explode('/', $url);
+        if(empty($url[0])){
+            $archivoController = 'controllers/main.php';
+            require $archivoController;
+            $controller = new main();
+            $controller->render();
+            $controller->loadModel('main');
+            return false;
+        }else{
+            $archivoController = 'controllers/' . $url[0] . '.php';
         }
-        $archivocontrolador = 'controllers/' . $url[0] . '.php';
-        if(file_exists($archivocontrolador))
-        {
-            require_once $archivocontrolador;
+ 
+        if(file_exists($archivoController)){
+            require $archivoController;
             $controller = new $url[0];
             $controller->loadModel($url[0]);
-            $nparam= sizeof($url);
+            // Se obtienen el número de param
+            $nparam = sizeof($url);
+            // si se llama a un método
             if($nparam > 1){
+                // hay parámetros
                 if($nparam > 2){
-                    $param=[];
-                    for($i = 2; $i<$nparam;$i++){
+                    $param = [];
+                    for($i = 2; $i < $nparam; $i++){
                         array_push($param, $url[$i]);
                     }
                     $controller->{$url[1]}($param);
                 }else{
-                     $controller->{$url[1]}();
+                    // solo se llama al método
+                    $controller->{$url[1]}();
                 }
             }else{
-                $controller->render();
+                // si se llama a un controlador
+                $controller->render();  
             }
-            
-        }else
-        {
-            $controller= new errores();
-        }   
+        }else{
+            $controller = new errores();
+        }
     }
+    
 }
-
