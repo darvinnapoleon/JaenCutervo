@@ -21,6 +21,9 @@ and open the template in the editor.
                     </ul>	
                 </li>
                 <li><a href="">CATEGORIAS</a>
+                <li>
+                    hola a todos ustedes
+                </li>
                     	
                 </li>
                 <li><a href="">PROCESOS</a>
