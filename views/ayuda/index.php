@@ -9,6 +9,7 @@
         <div id="main">
             <h1 class="center">seccion de ayuda</h1>
             <p>somos peru en todas partes </p>
+            <p> todos somos dignos</p>
         </div>
         <?php require 'views/footer.php'; ?>
 
