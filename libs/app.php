@@ -16,15 +16,20 @@ class app {
         }else{
             $archivoController = 'controllers/' . $url[0] . '.php';
         }
- 
         if(file_exists($archivoController)){
             require $archivoController;
             $controller = new $url[0];
+            //var_dump($controller);
             $controller->loadModel($url[0]);
             // Se obtienen el número de param
             $nparam = sizeof($url);
             // si se llama a un método
             if($nparam > 1){
+                if(!method_exists($controller, $url[1]))
+                {
+                 
+                    $controller = new errores();
+                }
                 // hay parámetros
                 if($nparam > 2){
                     $param = [];
@@ -32,7 +37,7 @@ class app {
                         array_push($param, $url[$i]);
                     }
                     $controller->{$url[1]}($param);
-                }else{
+                }else if(method_exists($controller, $url[1])){
                     // solo se llama al método
                     $controller->{$url[1]}();
                 }

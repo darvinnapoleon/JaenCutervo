@@ -12,4 +12,5 @@ class main extends controller
     function saludo(){
         echo '<p>ejecutaste el metodo saludo</p>';
     }
+        
 }
