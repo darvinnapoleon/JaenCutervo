@@ -1,8 +1,9 @@
 <?php
-
 class Usuario {
-
-    public $idusu;
-    public $nomusu;
-    public $conusu;
+    public $idcli;
+    public $nomcli;
+    public $apecli;
+    public $telcli;
+    public $usucli;
+    public $concli;
 }

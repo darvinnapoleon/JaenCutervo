@@ -62,5 +62,29 @@ class ConsultaModel extends model{
                 return false;
             }
         }
+        public function userExists($user, $pass){
+        $md5pass = md5($pass);
+        $query = $this->connect()->prepare('SELECT usucli,concli FROM cliente WHERE usucli = :usucli AND concli = :concli');
+        $query->execute(['usucli' => $user, 'concli' => $md5pass]);
+        if($query->rowCount()){
+            $mensaje="si existe";
+            return $mensaje;
+        }else{
+            $mensaje="no existe";
+            return $mensaje;
+        }
+    }
+    public function setUser($user){
+        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE username = :user');
+        $query->execute(['user' => $user]);
+        
+        foreach ($query as $currentUser) {
+            $this->nombre = $currentUser['nombre'];
+            $this->usename = $currentUser['username'];
+        }
+    }
+    public function getNombre(){
+        return $this->nombre;
+    }
 }
 ?>

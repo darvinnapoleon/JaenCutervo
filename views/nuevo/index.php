@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-        
+
         <?php require 'views/header.php'; ?>
         <div id="main">
             <h1 class="center">Ingresar</h1>

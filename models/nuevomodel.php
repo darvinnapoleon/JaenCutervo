@@ -20,3 +20,4 @@ class NuevoModel extends model
         }
     }
 }
+

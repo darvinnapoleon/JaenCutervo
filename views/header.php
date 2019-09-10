@@ -27,7 +27,7 @@ and open the template in the editor.
             <li><a href="<?php echo constant('URL'); ?>nuevo">Nuevo</a></li>
             <li><a href="<?php echo constant('URL'); ?>consulta">Consulta</a></li>
             <li><a href="<?php echo constant('URL'); ?>ayuda">Ayuda</a></li>
-            </ul>
+            <li><a href="<?php echo constant('URL'); ?>sesion">Sesion</a></li></ul>
             
         </nav>
         
