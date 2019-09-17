@@ -10,10 +10,11 @@ class sesion extends controller {
     function valCliente() {
       $usucli= $_POST['usucli'];
       $concli= $_POST['concli'];
-       if ($this->model->userExists($usucli, $concli)) {
-           // $this->view->mensaje = "Usuario correcto";
+       if ($this->model->userExists(['usucli' => $usucli, 'concli' => $concli])) {
+            $this->view->mensaje = "Usuario correcto";
         } else {
-           // $this->view->mensaje = "Usuario incorrecto";
+            $this->view->mensaje = "Usuario incorrecto";
         }
+         $this->render();
     }
 }
