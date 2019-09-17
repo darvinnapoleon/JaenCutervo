@@ -8,7 +8,7 @@ class ProCliente extends model {
 
     public function userExists($usucli, $concli) {
         $md5pass = md5($concli);
-        $query = $this->connect()->prepare('SELECT * FROM cliente WHERE usucli = :usucli AND concli = :concli');
+        $query = $this->connect()->prepare('SELECT usucli,concli FROM cliente WHERE usucli = :usucli AND concli = :concli');
         $query->execute(['usucli' => $usucli, 'concli' => $md5pass]);
         if ($query->rowCount()) {
             return true;

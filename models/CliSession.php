@@ -1,6 +1,6 @@
 <?php
 
-class UserSession{
+class CliSession{
     public function __construct(){
         session_start();
     }
@@ -15,4 +15,4 @@ class UserSession{
         session_destroy();
     }
 }
-?>
+

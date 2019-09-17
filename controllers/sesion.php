@@ -5,6 +5,15 @@ class sesion extends controller {
       //  $this->view->mensaje = "";
     }
     function render(){
-        $this->view->render('consulta/login');
+        $this->view->render('sesion/index');
+    }
+    function valCliente() {
+      $usucli= $_POST['usucli'];
+      $concli= $_POST['concli'];
+       if ($this->model->userExists($usucli, $concli)) {
+           // $this->view->mensaje = "Usuario correcto";
+        } else {
+           // $this->view->mensaje = "Usuario incorrecto";
+        }
     }
 }

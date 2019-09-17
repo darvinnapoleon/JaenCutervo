@@ -3,7 +3,7 @@
 //encontraras las constantes URL, HOST, BD, USER, PASS Y CHARSET.
 define('URL', 'http://localhost/SisGolosinas/');
 define('HOST', 'localhost');
-define('DB', 'mvc');
+define('DB', 'bdgolosinas');
 define('USER', 'root');
 define('PASSWORD', "");
 define('CHARSET', 'utf8mb4');
