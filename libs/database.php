@@ -22,10 +22,15 @@ class Database{
             ];
             
             $pdo = new PDO($connection, $this->user, $this->password, $options);
-    
+            
             return $pdo;
         }catch(PDOException $e){
             print_r('Error connection: ' . $e->getMessage());
         }
     }
+    
+   
 }
+
+
+   

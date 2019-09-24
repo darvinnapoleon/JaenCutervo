@@ -1,5 +1,5 @@
 <?php
-class sesion extends controller {
+class Sesion extends controller {
    function __construct() {
         parent::__construct();
       //  $this->view->mensaje = "";

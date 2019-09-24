@@ -21,7 +21,7 @@ and open the template in the editor.
             <ul class="menu_main" >
                 <li><a href="" ><img src="<?php echo constant('URL'); ?>public/img/men.png">Categoria</a>
                     <ul class="sub_menu">
-                        <li><a href="">Caramelos</a></li>
+                        <li><a href="<?php echo constant('URL'); ?>conpro">Caramelos</a></li>
                         <li><a href="">Chupetes</a></li>
                     </ul></li>
             <li><a href="<?php echo constant('URL'); ?>nuevo">Nuevo</a></li>
