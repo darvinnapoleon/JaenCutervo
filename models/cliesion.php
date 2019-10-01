@@ -1,6 +1,6 @@
 <?php
 
-class CliSession{
+class CliSesion{
     public function __construct(){
         session_start();
     }

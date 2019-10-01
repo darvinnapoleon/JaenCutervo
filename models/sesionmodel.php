@@ -1,21 +1,18 @@
 <?php
-include_once 'models/Cliente.php';
-class ProCliente extends model {
+include_once 'models/cliente.php';
+class SesionModel extends model {
 
     public function __construct() {
         parent::__construct();
     }
-
-    public function userExists($usucli, $concli) {
-        $md5pass = md5($concli);
+    public function userExists($item) {
+        $md5pass = md5($item['concli']);
         $query= $this->db->connect()->prepare('SELECT * FROM cliente WHERE usucli = :usucli AND concli = :concli');
         try {
-            $query->execute([
-                'usucli' => $usucli,
-                'concli' => $md5pass
-                    ]);
-            if ($query->rowCount()) 
-            return true;
+            $query->execute(['usucli' => $item['usucli'],'concli' => $md5pass]);
+            if ($query->rowCount()){
+             return true;   
+            }    
         } catch (PDOException $e) {
             return false;
         }

@@ -1,14 +1,13 @@
 <?php
-
 include_once 'models/product.php';
 
-class ProProducto extends model {
+class ConproModel extends model {
 
     public function __construct() {
         parent::__construct();
     }
 
-    public function getpro(){
+    public function getpro() {
         $items = [];
         try {
             $query = $this->db->connect()->query("SELECT*FROM producto");

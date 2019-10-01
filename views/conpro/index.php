@@ -26,10 +26,11 @@
             </thead>
             <tbody id="tbody-producto">
                 <?php
-                    include_once 'models/product.php';
+                include_once 'models/product.php';
                     foreach($this->producto as $row){
                         $product = new Product();
                         $product = $row; 
+                    
                 ?>
                 <tr id="fila-<?php echo $product->idpro;?>">
                     <td><?php echo $product->idpro; ?></td>
@@ -47,6 +48,6 @@
     </div>
 
     <?php require 'views/footer.php'; ?>
-    <script src="<?php echo constant('URL'); ?>public/js/main.js"></script>
+    <!--<script src="<?php //echo constant('URL'); ?>public/js/main.js"></script>-->
 </body>
 </html>
