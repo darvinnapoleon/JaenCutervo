@@ -1,4 +1,6 @@
-* {
+@import url(pri.css);
+
+*{ 
     margin:0px;
     padding:0px;
 }
@@ -10,6 +12,7 @@ body{
 .nav{
      background: #363751;
      overflow: hidden;
+     
 }
 .nav .menu_main{
     list-style: none;
@@ -71,13 +74,7 @@ body{
     background-color: #ccc;
     padding: 20px;
 }
-#main {
 
-    padding: 25px 0;
-    width: 500px;
-    margin: 0 auto;
-
-}
 .center{
 
     margin: 0 auto;
@@ -85,17 +82,7 @@ body{
 .error{
     color: #ac2323;
 }
-#boton{
-    color: #fff;
-     background: #363751;
-    border: 2px solid #363751;
-    border-radius: 6px;
 
-}
-#boton:hover {
-    background-color:#2FB4DC ;
-    color: white;
-    border: 2px solid  #2FB4DC;}
 div>form>p>input{
     width: 70%;
     padding: 7px 20px;
@@ -103,4 +90,57 @@ div>form>p>input{
     border: none;
     border-bottom: 2px solid #2FB4DC;
 
+}
+.tabla{
+    width: 300px;   
+    margin:auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+}
+.tabusu{
+    margin: 0 auto; 
+    width: 300px;
+    
+}
+.tabcli{
+   margin: 0 auto; 
+   width: 500px;
+}
+
+.inpsub{
+    color: #fff;
+    background: #363751;
+    border: 2px solid #363751;
+    border-radius: 6px;
+    width:100%;
+
+}
+.inpsub:hover {
+     background-color:#2FB4DC ;
+    color: white;
+    border: 2px solid  #2FB4DC;}
+.inptex{
+    width:100%;
+    border: none;
+    border-bottom: 2px solid #2FB4DC;
+    
+
+}
+.input{
+    
+    padding-top: 12px;
+    margin: 8px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.pritit{
+    background: url('public/img/pritit.png');
+}
+section{
+    width: 100%;
+    margin-bottom: 25px;
 }

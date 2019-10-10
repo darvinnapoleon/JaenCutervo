@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
         <link rel="StyleSheet" href="<?php echo constant('URL'); ?>public/css/default.css">
-
     </head>
     <body>
+        
         <nav id="header0">
             <a href="<?php echo constant('URL'); ?>main" ><img src="<?php echo constant('URL'); ?>public/img/log.png"></a>
             <a href="" id="imghea"><img src="<?php echo constant('URL'); ?>public/img/car.png" ><p>Carro</p></a>
@@ -19,17 +13,14 @@ and open the template in the editor.
         </nav>
         <nav class="nav">
             <ul class="menu_main" >
-                <li><a href="" ><img src="<?php echo constant('URL'); ?>public/img/men.png">Categoria</a>
+                <li><a href="" >Categoria</a>
                     <ul class="sub_menu">
                         <li><a href="<?php echo constant('URL'); ?>conpro">Caramelos</a></li>
                         <li><a href="">Chupetes</a></li>
                     </ul></li>
-            <li><a href="<?php echo constant('URL'); ?>nuevo">Nuevo</a></li>
-            <li><a href="<?php echo constant('URL'); ?>consulta">Consulta</a></li>
-            <li><a href="<?php echo constant('URL'); ?>ayuda">Ayuda</a></li>
-            <li><a href="<?php echo constant('URL'); ?>sesion">Sesion</a></li></ul>
-            
-        </nav>
-        
+                <li><a href="<?php echo constant('URL'); ?>sesion">Quien Somos</a></li>
+                <li><a href="<?php echo constant('URL'); ?>consulta">Consulta</a></li>
+                <li><a href="<?php echo constant('URL'); ?>ayuda">Ofertas</a></li> 
+        </nav>       
     </body>
 </html>

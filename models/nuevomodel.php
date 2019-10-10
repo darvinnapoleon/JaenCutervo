@@ -7,11 +7,12 @@ class NuevoModel extends model
         parent::__construct();
     }
   
-     public function insusu($datos)
+     public function regcli($datos)
     {
+         $md5pass = md5($datos['concli']);
         try{
-            $query= $this->db->connect()->prepare('INSERT INTO USUARIO (NOMUSU, CONUSU) VALUES(:nomusu, :conusu)');
-            $query->execute(['nomusu' => $datos['nomusu'], 'conusu' => $datos['conusu']]);
+            $query= $this->db->connect()->prepare('INSERT INTO cliente (nomcli, apecli, telcli, usucli, concli) VALUES(:nomcli, :apecli, :telcli, :usucli, :concli)');
+            $query->execute(['nomcli' => $datos['nomcli'], 'apecli' => $datos['apecli'], 'telcli' => $datos['telcli'], 'usucli' => $datos['usucli'], 'concli' => $md5pass]);
             return true;
         }catch(PDOException $e){
      

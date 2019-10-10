@@ -8,21 +8,21 @@ class nuevo extends controller
     function render(){
         $this->view->render('nuevo/index');
     }
-    function render1(){
-        $this->view->render('main/index');
-    }
-    function registrarUsuario(){
-        $nomusu= $_POST['nomusu'];
-        $conusu= $_POST['conusu'];
+    function registrarCliente(){
+        $nomcli= $_POST['nomcli'];
+        $apecli= $_POST['apecli'];
+        $telcli= $_POST['telcli'];
+        $usucli= $_POST['usucli'];
+        $concli= $_POST['concli'];
         $mensaje="";
-        if($this->model->insusu(['nomusu' => $nomusu, 'conusu' => $conusu])){
-            $mensaje = "Nuevo usuario creado";
+        if($this->model->regcli(['nomcli' => $nomcli,'apecli' => $apecli,'telcli' => $telcli,'usucli' => $usucli, 'concli' => $concli])){
+            $mensaje = "Datos registrados correctamente";
             
         }else{
-            $mensaje = "El usuario ya existe";
+            $mensaje = "Tu ya estas registrado";
         }
         $this->view->mensaje = $mensaje;
-        $this->render1();
+        $this->render();
     } 
 }
 
