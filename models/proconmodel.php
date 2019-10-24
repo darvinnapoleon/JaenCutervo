@@ -1,7 +1,7 @@
 <?php
 include_once 'models/product.php';
 
-class ConproModel extends model {
+class ProconModel extends model {
 
     public function __construct() {
         parent::__construct();

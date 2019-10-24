@@ -1,6 +1,6 @@
 <?php
 
-class consulta extends controller {
+class alucon extends controller {
 
     function __construct() {
         parent::__construct();
@@ -10,7 +10,7 @@ class consulta extends controller {
     function render() {
         $alumnos = $this->model->get();
         $this->view->alumnos = $alumnos;
-        $this->view->render('consulta/index');
+        $this->view->render('alucon/index');
     }
 
     function verAlumno($param = null) {
@@ -21,7 +21,7 @@ class consulta extends controller {
         $_SESSION['idVerAlumno'] = $alumno->matricula;
         $this->view->mensaje = "";
         $this->view->alumno = $alumno;
-        $this->view->render('consulta/detalle');
+        $this->view->render('alucon/detalle');
     }
 
     function actualizarAlumno() {
@@ -40,7 +40,7 @@ class consulta extends controller {
         } else {
             $this->view->mensaje = "No se pudo actualizar el alumno";
         }
-        $this->view->render('consulta/detalle');
+        $this->view->render('alucon/detalle');
     }
 
     function eliminarAlumno($param = null) {

@@ -2,7 +2,7 @@
 
 include_once 'models/alumno.php';
 
-class ConsultaModel extends model {
+class AluconModel extends model {
 
     public function __construct() {
         parent::__construct();

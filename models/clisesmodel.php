@@ -1,6 +1,6 @@
 <?php
 include_once 'models/cliente.php';
-class SesionModel extends model {
+class ClisesModel extends model {
 
     public function __construct() {
         parent::__construct();

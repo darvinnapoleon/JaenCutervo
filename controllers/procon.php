@@ -1,5 +1,5 @@
 <?php
-class conpro extends controller {
+class procon extends controller {
 
     function __construct() {
         parent::__construct();
@@ -10,6 +10,6 @@ class conpro extends controller {
         
         $producto = $this->model->getpro();
         $this->view->producto = $producto;
-        $this->view->render('conpro/index');
+        $this->view->render('procon/index');
     }
 }

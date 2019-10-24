@@ -1,11 +1,11 @@
 <?php
-class Sesion extends controller {
+class Clises extends controller {
    function __construct() {
         parent::__construct();
       //  $this->view->mensaje = "";
     }
     function render(){
-        $this->view->render('sesion/index');
+        $this->view->render('clises/index');
     }
     function valCliente() {
       $usucli= $_POST['usucli'];
