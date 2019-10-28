@@ -22,8 +22,7 @@
                 <span class="icon-menu" id="btnmenu"></span>
                 <ul class="menu" id="menu">
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>main" class="menu_link" >Inicio</a></li>
-                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>catcon" class="menu_link " >Categoria</a></li>
-                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>procon" class="menu_link">Producto</a></li>
+                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>catcon" class="menu_link" >Categoria</a></li>
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>alucon" class="menu_link menu_link_select">Alumno</a></li>
                 </ul>
                 <div class="social-icon">
@@ -57,7 +56,7 @@
                     <td><?php echo $alumno->matricula; ?></td>
                     <td><?php echo $alumno->nombre; ?></td>
                     <td><?php echo $alumno->apellido; ?></td>
-                    <td><a href="<?php echo constant('URL') . 'alucom/verAlumno/' . $alumno->matricula;?>">Editar</a>  </td>
+                    <td><a href="<?php echo constant('URL') . 'alucon/verAlumno/' . $alumno->matricula;?>">Editar</a>  </td>
                      <td><button class="bEliminar" data-matricula="<?php echo $alumno->matricula; ?>">Eliminar</button></td>
                     <!--<td><a href="<?php echo constant('URL') . 'alucon/eliminarAlumno/' . $alumno->matricula;?>">Eliminar</a> </td> -->
                 </tr>

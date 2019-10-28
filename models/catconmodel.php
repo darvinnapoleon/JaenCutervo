@@ -15,7 +15,7 @@ class CatconModel extends model {
                 $item = new Categoria();
                 $item->idcat = $row['idcat'];
                 $item->nomcat = $row['nomcat'];
-                $item->fotcat = $row['fotcat'];
+                $item->fotcat = base64_encode($row['fotcat']);
                 array_push($items, $item);
             }
             return $items;

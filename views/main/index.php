@@ -23,7 +23,6 @@
                 <ul class="menu" id="menu">
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>main" class="menu_link menu_link_select" >Inicio</a></li>
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>catcon" class="menu_link" >Categoria</a></li>
-                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>procon" class="menu_link">Producto</a></li>
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>alucon" class="menu_link">Alumno</a></li>
                 </ul>
                 <div class="social-icon">
@@ -33,7 +32,7 @@
             </div>
         </nav>
         <section class="banner">
-		<img src="<?php echo constant('URL'); ?>public/img/banner.jpg" alt="" class="banner_img">
+		<img src="<?php echo constant('URL'); ?>public/img/banner.webp" alt="" class="banner_img">
 		<div class="banner_content">Disfruta de dulcura hoy mismo</div>
 	</section>
 

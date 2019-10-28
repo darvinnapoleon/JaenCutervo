@@ -22,8 +22,7 @@
                 <span class="icon-menu" id="btnmenu"></span>
                 <ul class="menu" id="menu">
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>main" class="menu_link" >Inicio</a></li>
-                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>catcon" class="menu_link " >Categoria</a></li>
-                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>procon" class="menu_link">Producto</a></li>
+                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>catcon" class="menu_link" >Categoria</a></li>
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>alucon" class="menu_link menu_link_select">Alumno</a></li>
                 </ul>
                 <div class="social-icon">

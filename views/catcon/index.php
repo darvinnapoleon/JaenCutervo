@@ -23,7 +23,6 @@
                 <ul class="menu" id="menu">
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>main" class="menu_link" >Inicio</a></li>
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>catcon" class="menu_link menu_link_select" >Categoria</a></li>
-                    <li class="menu_item"><a href="<?php echo constant('URL'); ?>procon" class="menu_link ">Producto</a></li>
                     <li class="menu_item"><a href="<?php echo constant('URL'); ?>alucon" class="menu_link">Alumno</a></li>
                 </ul>
                 <div class="social-icon">
@@ -44,7 +43,7 @@
                         $cat = $row;
                         ?>
                         <div class="column column_50-25">
-                            <img src="<?php echo constant('URL'); ?>public/img/sub.jpg" alt="" class="today-special_img">
+                            <a href="<?php echo constant('URL') . 'procon/verCat/' . $cat->idcat;?>"><img src="data:image/jpg;base64,<?php echo $cat->fotcat;  ?>" alt="" class="today-special_img"></a>
                             <div class="today-special_title"><?php echo $cat->nomcat; ?></div>
                         </div>
                     <?php } ?>
