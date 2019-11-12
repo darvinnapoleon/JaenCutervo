@@ -16,18 +16,22 @@
 }.colum-title{
 	font-size:1.3em;
 }
-.main-about-description .column:nth-child(2){
+.main-about-description .column:nth-child(2) {
 	padding: 10px;
 }
 .btn{
 	display: block;
 	text-align: center;
-	text-decoration: none;
-	width: 120px;
+	width: 250px;
 	background: #DE423A;
 	color: white;
 	padding: 10px;
 	margin: 10px auto;
+        border: 2px solid #DE423A;
+        border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
 }
 .group_title{
 	font-family: 'Pacifico', cursive;
@@ -44,6 +48,9 @@
 	margin: auto;
 	max-width: 350px;
 }
+.today-special_img:hover{
+	cursor: pointer;
+}
 .today-special_title{
 	font-size:1.3em;
 	padding-top: 10px;
@@ -54,3 +61,37 @@
 	color: #DE423A;
 	font-weight: bold;
 }
+.today-special-cantidad{
+    width: 30px;
+    border: none;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+}
+.column--50>span{
+    padding-right: 20px;
+    text-align: center;
+}
+.column--50>span>a{
+    text-decoration: none;
+    padding-right: 8px;
+    padding-left: 8px;
+    color:#222;
+    font-size:1.2em;
+    
+}
+.column--50>span>a:hover{
+   cursor: pointer;
+   background: #ffcc66;
+   border-radius: 10px; 
+}
+.column--50>button{
+    border: none;
+    width: 30px;
+   border-radius: 5px;
+}
+.column--50>button:hover{
+    cursor: pointer;
+    color: white;
+    background: red;
+}
+

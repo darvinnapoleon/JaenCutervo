@@ -34,9 +34,7 @@
 
     <div id="main">
         <h1 class="center">Sección de Consulta</h1>
-      
         <div id="respuesta" class="center"></div>
-
         <table width="100%">
             <thead>
                 <tr>
@@ -58,9 +56,7 @@
                     <td><?php echo $alumno->apellido; ?></td>
                     <td><a href="<?php echo constant('URL') . 'alucon/verAlumno/' . $alumno->matricula;?>">Editar</a>  </td>
                      <td><button class="bEliminar" data-matricula="<?php echo $alumno->matricula; ?>">Eliminar</button></td>
-                    <!--<td><a href="<?php echo constant('URL') . 'alucon/eliminarAlumno/' . $alumno->matricula;?>">Eliminar</a> </td> -->
                 </tr>
-
                 <?php } ?>
             </tbody>
         </table>

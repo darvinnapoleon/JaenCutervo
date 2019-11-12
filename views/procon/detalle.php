@@ -1,4 +1,3 @@
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -11,12 +10,9 @@
     <body>
         <header class="main-header">
             <div class="container container_flex">
-                <div class="logo-container column column--50">
-                    <h1 class="logo">Golosinas Anita</h1>
-                </div>
+                <div class="logo-container column column--50"><h1 class="logo">Golosinas Anita</h1></div>
             </div>
         </header>
-
         <nav class="main-nav">
             <div class="container container_flex">
                 <span class="icon-menu" id="btnmenu"></span>
@@ -31,29 +27,33 @@
                 </div>
             </div>
         </nav>
-        <div class="main">
-            <section class="group main_about_description">
+        <main class="main">
+            <section class="group main-about-description">
                 <div class="container container_flex">
-                    <div class="column column_50">
-                        <img src="data:image;base64,<?php echo $this->producto->fotpro; ?>" alt="" class="">
+                    <div class="column column--50">
+                        <img src="data:image;base64,<?php echo $this->producto->fotpro; ?>">
                     </div>
-                    <div class="column column_50">
-                        <h3>descripcion sublime nestle de 50gm</h3>
-                        <div class="today-special_price">12</div>
-                        <div>
-                            <select name="" id="">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                            </select>
-                        </div>
-                        <div>
-                            <input type="submit" value="Comprar Ahora">
-                        </div>
-                        
+                    <div class="column column--50">
+                        <form action="controlped.do" method="POST">
+                            <h3 class="colum-title"><?php echo $this->producto->nompro; ?> </h3>
+                            <div class="column--50-space">Precio: <span class="today-special_price"></span></div>
+                            <input type="hidden" value="" name="txtidpro"/>
+                            <div class="column--50-space">
+                                Cantidad: <select name="txtcanpro" id="" class="column--50-list">
+                                    <?php for ($i = 1; $i < 6; $i++) {?>
+                                    <option value="<?php echo $i;?>"><?php echo $i;?></option>     
+                                    <?php }?>
+                                </select> 
+                            </div>
+                            <div class="column--50-space">
+                                <input type="submit" value="Agregar al carrito" class="btn">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
+       
         <?php require 'views/footer.php'; ?>
 
     </body>
